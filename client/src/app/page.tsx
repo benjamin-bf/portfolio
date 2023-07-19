@@ -2,6 +2,7 @@
 import { Typography } from '@material-tailwind/react'
 import React from 'react'
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import ProjectCard from '@/components/projectCard';
 
 export default function Home() {
   const [iconColor, setIconColor] = React.useState('white')
@@ -25,7 +26,7 @@ export default function Home() {
   const itemsHeader = [{name:"Home", id:"home"}, {name:"About", id:"aboutMe"},{name:"Skills", id:"skills"}, {name:"Projects", id:"projects"}, {name:"contact", id:"contact"}]
   return (
     <main>
-      <div className="flex h-screen flex-col items-center justify-between">
+      <div className="flex h-screen flex-col items-center justify-between" id="home">
       <div className='flex flex-col w-full h-full justify-between'>
         <div className='fixed h-[56px] flex justify-between w-full items-center px-6'>
             <h1 className=' text-2xl font-bold'>Benjamin BF</h1>
@@ -79,8 +80,14 @@ export default function Home() {
     <div className='flex flex-col w-full h-screen justify-between bg-slate-200' id="skills">
 
     </div>
-    <div className='flex flex-col w-full h-screen justify-between bg-slate-500' id="projects">
-
+    <div className='flex flex-col w-full h-screen justify-between bg-red-100' id="projects">
+      <div className='grid grid-cols-3 grid-rows-2 w-3/5 h-full mt-40 mb-20 mx-auto gap-4 '>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        
+      </div>
     </div>
     <div className='flex flex-col w-full h-screen justify-between bg-slate-200' id="contact">
 
